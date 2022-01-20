@@ -66,6 +66,7 @@ abstract class Temperature{
         $scales = [
             'c' => 'celsius',
             'f' =>  'fahrenheit',
+            'k' =>  'kelvin',
         ];
 
         return $scales[$scale];
