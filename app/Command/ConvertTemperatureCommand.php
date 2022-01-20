@@ -27,10 +27,10 @@ class ConvertTemperatureCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $temperature_value =  $input->getArgument('temperature_value');
-        $from_temperature_scale = $input->getArgument('temperature_scale_to');
+        $temperature_scale_to = $input->getArgument('temperature_scale_to');
 
         $temp = new $this->class($temperature_value);
-        $converted_temperature = $temp->convertTo($from_temperature_scale);
+        $converted_temperature = $temp->convertTo($temperature_scale_to);
         $output->writeln('Output: '. $converted_temperature);
 
         return Command::SUCCESS;
