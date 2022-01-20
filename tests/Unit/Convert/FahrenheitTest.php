@@ -17,7 +17,7 @@ class FahrenheitTest extends ConvertTestCase
     }
 
     public function testCelsius(){
-        $expected = ($this->random_temperature * 9/5) + 32;
+        $expected = ($this->random_temperature  - 32) * 5/9;
         $actual = $this->class->convertTo('C');
 
         $this->assertEquals($expected, $actual);

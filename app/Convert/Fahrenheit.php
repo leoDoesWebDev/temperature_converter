@@ -16,7 +16,7 @@ class Fahrenheit extends Temperature {
      */
     protected function celsius():float|int
     {
-        return ($this->value * 9/5) + 32;
+        return ($this->value  - 32) * 5/9;
     }
 
 
