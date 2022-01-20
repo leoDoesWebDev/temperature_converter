@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command;
+namespace App\Commands;
 
 class ConvertKelvinCommand extends ConvertTemperatureCommand
 {

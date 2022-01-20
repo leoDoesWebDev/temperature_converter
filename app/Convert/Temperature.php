@@ -60,7 +60,7 @@ abstract class Temperature{
      * @param $scale
      * @return string
      */
-    private function lookUpScaleFullForm($scale): string
+    public function lookUpScaleFullForm($scale): string
     {
         $scale = strtolower($scale);
         $scales = [

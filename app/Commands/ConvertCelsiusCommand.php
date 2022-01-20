@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command;
+namespace App\Commands;
 
 use App\Convert\Celsius;
 use Symfony\Component\Console\Command\Command;

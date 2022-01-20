@@ -2,10 +2,10 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-use App\Command\ConvertFahrenheitCommand;
-use App\Command\ConvertKelvinCommand;
+use App\Commands\ConvertFahrenheitCommand;
+use App\Commands\ConvertKelvinCommand;
 use Symfony\Component\Console\Application;
-use App\Command\ConvertCelsiusCommand;
+use App\Commands\ConvertCelsiusCommand;
 
 $application = new Application();
 

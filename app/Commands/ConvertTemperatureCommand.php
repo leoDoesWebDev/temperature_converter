@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command;
+namespace App\Commands;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -24,7 +24,7 @@ class ConvertTemperatureCommand extends Command
     }
 
 
-    protected function execute(InputInterface $input, OutputInterface $output): int
+    public function execute(InputInterface $input, OutputInterface $output): int
     {
         $temperature_value =  $input->getArgument('temperature_value');
         $temperature_scale_to = $input->getArgument('temperature_scale_to');
