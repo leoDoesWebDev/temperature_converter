@@ -11,7 +11,6 @@ class ConvertCelsiusCommand extends ConvertTemperatureCommand
 {
     protected static $defaultName = 'convert:celsius';
     protected static $defaultDescription = 'Converts celsius temperatures to a given scale.';
-    protected string $class;
 
     public function __construct()
     {

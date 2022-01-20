@@ -6,7 +6,6 @@ class ConvertFahrenheitCommand extends ConvertTemperatureCommand
 {
     protected static $defaultName = 'convert:fahrenheit';
     protected static $defaultDescription = 'Converts fahrenheit temperatures to a given scale.';
-    protected string $class;
 
     public function __construct()
     {

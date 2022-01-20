@@ -9,6 +9,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class ConvertTemperatureCommand extends Command
 {
+    protected string $class;
+
     public function __construct()
     {
         parent::__construct();
