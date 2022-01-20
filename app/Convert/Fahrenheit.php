@@ -9,7 +9,6 @@ class Fahrenheit extends Temperature {
         parent::__construct($value);
     }
 
-
     /**
      * Convert to celsius
      *
@@ -29,5 +28,17 @@ class Fahrenheit extends Temperature {
     protected function fahrenheit():float|int
     {
         return $this->value;
+    }
+
+
+
+    /**
+     * Convert to kelvin
+     *
+     * @return int|float
+     */
+    protected function kelvin(): float|int
+    {
+        return ($this->value - 32) * 5/9 + 273.15;
     }
 }

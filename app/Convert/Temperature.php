@@ -46,6 +46,15 @@ abstract class Temperature{
 
 
     /**
+     * Convert to kelvin
+     *
+     * @return int|float
+     */
+    protected abstract function kelvin():int|float;
+
+
+
+    /**
      * Looks up full form of abbreviated scale
      *
      * @param $scale

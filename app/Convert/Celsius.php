@@ -30,4 +30,15 @@ class Celsius extends Temperature{
     {
         return ($this->value - 32) * 5/9;
     }
+
+
+    /**
+     * Convert to kelvin
+     *
+     * @return int|float
+     */
+    protected function kelvin(): float|int
+    {
+        return $this->value + 273.15;
+    }
 }
