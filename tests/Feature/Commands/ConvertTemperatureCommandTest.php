@@ -29,8 +29,8 @@ class ConvertTemperatureCommandTest extends TestCase
             $application = new Application();
             $application->add(new ConvertKelvinCommand());
             $command = $application->find('convert:kelvin');
-            $commandTester = new CommandTester($command);
-            $commandTester->execute(array(
+            $command_tester = new CommandTester($command);
+            $command_tester->execute(array(
                 'command' => $command->getName(),
                 'temperature_value' => $temperature_value,
                 'temperature_scale_to' => $temperature_abbreviated_scale
@@ -38,7 +38,7 @@ class ConvertTemperatureCommandTest extends TestCase
 
             $output = (new Kelvin($temperature_value))->convertTo($temperature_abbreviated_scale);
             $expected = "Output: {$output}\n";
-            $actual = $commandTester->getDisplay();
+            $actual = $command_tester->getDisplay();
 
             $this->assertEquals($expected, $actual);
         }
@@ -52,8 +52,8 @@ class ConvertTemperatureCommandTest extends TestCase
             $application = new Application();
             $application->add(new ConvertCelsiusCommand());
             $command = $application->find('convert:celsius');
-            $commandTester = new CommandTester($command);
-            $commandTester->execute(array(
+            $command_tester = new CommandTester($command);
+            $command_tester->execute(array(
                 'command' => $command->getName(),
                 'temperature_value' => $temperature_value,
                 'temperature_scale_to' => $temperature_abbreviated_scale
@@ -61,7 +61,7 @@ class ConvertTemperatureCommandTest extends TestCase
 
             $output = (new Celsius($temperature_value))->convertTo($temperature_abbreviated_scale);
             $expected = "Output: {$output}\n";
-            $actual = $commandTester->getDisplay();
+            $actual = $command_tester->getDisplay();
 
             $this->assertEquals($expected, $actual);
         }
@@ -75,8 +75,8 @@ class ConvertTemperatureCommandTest extends TestCase
             $application = new Application();
             $application->add(new ConvertFahrenheitCommand());
             $command = $application->find('convert:fahrenheit');
-            $commandTester = new CommandTester($command);
-            $commandTester->execute(array(
+            $command_tester = new CommandTester($command);
+            $command_tester->execute(array(
                 'command' => $command->getName(),
                 'temperature_value' => $temperature_value,
                 'temperature_scale_to' => $temperature_abbreviated_scale
@@ -84,7 +84,7 @@ class ConvertTemperatureCommandTest extends TestCase
 
             $output = (new Fahrenheit($temperature_value))->convertTo($temperature_abbreviated_scale);
             $expected = "Output: {$output}\n";
-            $actual = $commandTester->getDisplay();
+            $actual = $command_tester->getDisplay();
 
             $this->assertEquals($expected, $actual);
         }
