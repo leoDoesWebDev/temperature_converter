@@ -13,6 +13,7 @@ use Symfony\Component\Console\Tester\CommandTester;
 
 class ConvertTemperatureCommandTest extends TestCase
 {
+    private array $temperature_scales;
 
     public function setUp(): void
     {
